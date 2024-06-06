@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 void insertElement(int arr[], int size, int t, int pos) 
 {
     if (pos >= 0 && pos <= size) {
@@ -42,7 +41,6 @@ int main() {
         printf("\n1. Insert\n2. Delete\n3. Display\n4. Exit\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
-        
         switch(choice) {
             case 1:
                 printf("Enter the element to insert: ");
