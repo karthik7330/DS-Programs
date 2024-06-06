@@ -1,0 +1,79 @@
+#include <stdio.h>
+
+void insertElement(int arr[], int size, int t, int pos) 
+{
+    if (pos >= 0 && pos <= size) {
+        for (int i = size; i > pos; i--) 
+        {
+            arr[i] = arr[i - 1];
+        }
+        arr[pos] = t;
+        size++; 
+    }
+}
+void deleteElement(int arr[], int size, int pos) 
+{
+    if (pos >= 0 && pos < size) 
+    {
+        for (int i = pos; i < size - 1; i++) 
+        {
+            arr[i] = arr[i + 1];
+        }
+        size--; 
+    }
+}
+void displayArray(int arr[], int size) 
+{
+    for (int i = 0; i < size; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+}
+int main() {
+    int choice;
+    int size = 5;
+    int arr[100] = {1, 2, 3, 4, 5}; 
+    int pos, t;
+
+    while(1)    
+    {
+        printf("-------Start Menu-------");
+        printf("\n1. Insert\n2. Delete\n3. Display\n4. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+        
+        switch(choice) {
+            case 1:
+                printf("Enter the element to insert: ");
+                scanf("%d", &t);
+                printf("Enter the position: ");
+                scanf("%d", &pos);
+                if (pos >= 0 && pos <= size) {
+                    insertElement(arr, size, t, pos);
+                    size++; 
+                } else {
+                    printf("Invalid position!\n");
+                }
+                break;
+            case 2:
+                printf("Enter the position to delete: ");
+                scanf("%d", &pos);
+                if (pos >= 0 && pos < size) {
+                    deleteElement(arr, size, pos);
+                    size--;
+                } else {
+                    printf("Invalid position!\n");
+                }
+                break;
+            case 3:
+                displayArray(arr, size);
+                break;
+            case 4:
+                return 0;
+            default:
+                printf("Invalid choice!\n");
+        }
+    }
+    return 0;
+}
