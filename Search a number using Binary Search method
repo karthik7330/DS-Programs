@@ -26,3 +26,5 @@ int main() {
         printf("Element not found\n");
     return 0;
 }
+
+Output: Element found at index: 4
