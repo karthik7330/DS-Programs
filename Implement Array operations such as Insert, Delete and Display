@@ -75,3 +75,20 @@ int main() {
     }
     return 0;
 }
+
+Output:
+-------Start Menu-------
+1. Insert
+2. Delete
+3. Display
+4. Exit
+Enter your choice: 1
+Enter the element to insert: 3
+Enter the position: 2
+-------Start Menu-------
+1. Insert
+2. Delete
+3. Display
+4. Exit
+Enter your choice: 3
+1 2 3 3 4 5 
