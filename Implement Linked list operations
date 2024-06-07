@@ -45,3 +45,7 @@ int main() {
     printf("\n");
     return 0;
 }
+
+Output:
+Initial list: 1 2 3 
+List after deleting 2: 1 3
