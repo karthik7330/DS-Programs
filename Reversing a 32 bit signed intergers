@@ -17,3 +17,6 @@ int main()
     printf("Reversed Integer: %d\n", reversedNum);
     return 0;
 }
+
+Output:
+Reversed Integer: -987654321
